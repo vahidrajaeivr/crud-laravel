@@ -212,4 +212,11 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'apiBaseUrl' => '127.0.0.1/api/',
+
+    'countries' => [
+        1 => 'United Kingdom',
+        2 => 'United States',
+        3 => 'Germany'
+    ]
 ];
