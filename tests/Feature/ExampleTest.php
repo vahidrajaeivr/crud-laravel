@@ -4,18 +4,28 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ExampleTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function test_the_application_returns_a_successful_response()
+    public function test_create_user()
     {
-        $response = $this->get('/');
+        $data = [
+            'name' => 'vahid',
+            'age' => '36',
+            'email' => 'vahid.test@gmail.com',
+            'country_id' => '1'
+        ];
 
-        $response->assertStatus(200);
+        $response = $this->post('/api/users', $data);
+
+        $response->assertStatus(201);
     }
 }
