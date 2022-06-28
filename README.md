@@ -32,8 +32,7 @@ user information with the following:
 
 ### Up and Running
 
-1- composer install
-
-2- vendor/bin/sail up
-
-3- vendor/bin/sail php artisan migrate
+```
+composer install
+vendor/bin/sail up
+vendor/bin/sail php artisan migrate
