@@ -36,3 +36,9 @@ user information with the following:
 composer install
 vendor/bin/sail up
 vendor/bin/sail php artisan migrate
+
+```
+
+### Postman Export and Endpoints
+Please check the `CRUD User.postman_collection.json` file for the postman endpoints.
+You could also import the above file into the postman.
