@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "afd04b1b-e3ec-4cc6-a73f-dcae5ebde0aa",
+		"name": "CRUD User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/users?name=vahid12&email=vahid12@gmail.com&country_id=13&age=45",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "vahid12"
+						},
+						{
+							"key": "email",
+							"value": "vahid12@gmail.com"
+						},
+						{
+							"key": "country_id",
+							"value": "13"
+						},
+						{
+							"key": "age",
+							"value": "45"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "vahid10",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "vahid10@a.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/api/users/6f0b2c7b-ed9c-4036-9d3f-710a24e8ca9a",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"6f0b2c7b-ed9c-4036-9d3f-710a24e8ca9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/users/bd252bc1-504e-4b42-8190-52ec201ff410",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"bd252bc1-504e-4b42-8190-52ec201ff410"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost/api/users/search?term=vahid",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "term",
+							"value": "vahid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/users/bd252bc1-504e-4b42-8190-52ec201ff410",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"bd252bc1-504e-4b42-8190-52ec201ff410"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
