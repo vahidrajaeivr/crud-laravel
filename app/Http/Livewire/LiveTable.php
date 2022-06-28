@@ -5,16 +5,17 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\User;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Request;
 
 class LiveTable extends Component
 {
-    private $apiBaseUrl = '127.0.0.1/api/';
     public $search = '';
     protected $listeners = ['delete' => 'delete', 'triggerRefresh' => '$refresh'];
 
     public function delete($id)
     {
-        return Http::delete($this->apiBaseUrl . 'users/' . $id);
+        $request = Request::create('/api/users/'.$id, 'DELETE');
+        $response = app()->handle($request);
     }
 
     public function render()
@@ -22,7 +23,7 @@ class LiveTable extends Component
         $users = User::query()
             ->where('name', 'LIKE', "%{$this->search}%")
             ->orWhere('email', 'LIKE', "%{$this->search}%")
-            ->paginate();
+            ->simplePaginate();
 
         $countries = config('app.countries');    
 

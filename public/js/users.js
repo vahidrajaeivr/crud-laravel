@@ -19,7 +19,6 @@ Livewire.on("triggerCreate", function () {
 });
 window.addEventListener("user-saved", function (event) {
   $("#user-modal").modal("hide");
-  alert("User ".concat(event.detail.user_name, " was ").concat(event.detail.action, "!"));
 });
 Livewire.on("dataFetched", function (user) {
   $("#user-modal").modal("show");

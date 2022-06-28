@@ -28,7 +28,7 @@
             @error('country') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
-        <button type="button" class="btn btn-primary mt-3" type="submit">Save changes</button>
+        <button class="btn btn-primary mt-3" type="submit">Save changes</button>
 
     </form>
 </div>
